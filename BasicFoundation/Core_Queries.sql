@@ -1,4 +1,4 @@
-'''
+  '''
     Table name " employees"
 id | name | department | salary | city | experience  | joining date
 '''
@@ -119,7 +119,26 @@ id | name | department | salary | city | experience  | joining date
                                     and name not like "o%"
                                     and name not like "u%"
 
---38.
+--38. Get  employees whose name has atleast 2 'a' characters
+        select name from employees where name like "%a%a%";
+
+--39. Get employees whose salary ends with 000
+        select name, salary from employees where salary like '%000';
+
+--40.Get employees hired in the first quarter
+        select name, joining_date from employees where joining_date like '%-01-%' or joining_date like "%-02-%" or joining_date like "%-03-%";
+
+
+--41.Get employees whose joining date is on 15th of anymonth
+        select  name, joining_date from employees where joining_date like "%-15";
+
+--42.Get employees whose salary is a 5 digit 
+        select name, salary from employees where salary between 100000 and 999999;
+
+--43.Get employees who joined before 2020 and earning > 70k
+        select name, joining_date from employees where joining_date < '2020-01-01' and salary >70000;--
+
+--44.
 
 
 
