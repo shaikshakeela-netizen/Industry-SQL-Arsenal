@@ -138,7 +138,16 @@ id | name | department | salary | city | experience  | joining date
 --43.Get employees who joined before 2020 and earning > 70k
         select name, joining_date from employees where joining_date < '2020-01-01' and salary >70000;--
 
---44.
+--44.Get employees whose joining in the second half of the year
+       select name, joining_date from employees where joining_date like '%-06-%'
+                                            or joining_date like '%-07-%'
+                                            or joining_date like '%-08%'
+                                            or joining_date like '%-09-%'
+                                            or joining_date like '%-10-%'
+                                            or joining_date like '%-11-%'
+                                            or joining_date like '%-12-%';
 
+--45.Get employees whose name length is greater than 6 characters
+            select name from employees where like '______%';
 
 
